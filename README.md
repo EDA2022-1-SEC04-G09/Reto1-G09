@@ -1,5 +1,5 @@
-Carolina Chinchilla - 202011842 - m.chinchilla@uniandes.edu.co 
-Jose Mendoza - 202022667 - j.mendozam@uniandes.edu.co
+Req 3 - Carolina Chinchilla - 202011842 - m.chinchilla@uniandes.edu.co 
+Req 2 - Jose Mendoza - 202022667 - j.mendozam@uniandes.edu.co
 
 #ISIS1225 - Librerias de soporte
 
