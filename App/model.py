@@ -56,14 +56,14 @@ def newCatalog():
 
 # Funciones para agregar informacion al catalogo
 
-def addArtistas(id, track_id, artist_popularity, genres, name, followers):
+def Artistas(id, track_id, artist_popularity, genres, name, followers):
 
     artista= {'id': " ",
             'track_id': " ",
-            'artist_popularity': " ",
+            'artist_popularity': 0,
             'genres': " ",
             'name': " ",
-            'followers': " "}
+            'followers': 0}
     artista['id']=id
     artista['genres'] = lt.newList('ARRAY_LIST')
     artista['genres']= genres
@@ -73,7 +73,7 @@ def addArtistas(id, track_id, artist_popularity, genres, name, followers):
     artista['followers']= followers
     return artista
 
-def addAlbumes (id,track_id,total_tracks,external_urls,album_type,available_markets,artist_id,images,release_date,name,release_date_precision):
+def Albumes (id,track_id,total_tracks,external_urls,album_type,available_markets,artist_id,images,release_date,name,release_date_precision):
 
     album = {"id":"",
              "track_id":"",
@@ -83,7 +83,7 @@ def addAlbumes (id,track_id,total_tracks,external_urls,album_type,available_mark
              "available_markets":"",
              "artist_id":"",
              "images":"",
-             "release_date":"",
+             "release_date":0,
              "name":"",
              "release_date_precision":""
 
@@ -103,6 +103,12 @@ def addAlbumes (id,track_id,total_tracks,external_urls,album_type,available_mark
     album["release_date_precision"]=release_date_precision
 
     return album
+
+def addArtista(spotify, artista):
+    lt.addLast(spotify['artistas'], artista)
+
+def addArtista(spotify, album):
+    lt.addLast(spotify['albums'], album)
 
 # Funciones para creacion de datos
 
