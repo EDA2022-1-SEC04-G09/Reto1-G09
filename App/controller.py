@@ -37,12 +37,37 @@ El controlador se encarga de mediar entre la vista y el modelo.
 
 # Funciones de consulta sobre el catálogo
 
-def newController():
+
+
+def catalogo():
+    catalogo = model.newCatalog()
+    return catalogo
+
+
+def cargarDatos(spotify):
+    cargarArtistas(spotify)
+    cargarObras(spotify)
+
+
+
+# Funciones para la carga de datos
+def cargarArtistas(spotify):
     """
-    Crea una instancia del modelo
+    Carga los libros del archivo.  Por cada libro se toman sus autores y por
+    cada uno de ellos, se crea en la lista de autores, a dicho autor y una
+    referencia al libro que se esta procesando.
     """
-    control = {
-        'model': None
-    }
-    control['model'] = model.newCatalog()
-    return control
+    booksfile = cf.data_dir + 'spotify-rtists-utf8-small.csv'
+    input_file = csv.DictReader(open(booksfile, encoding='utf-8'))
+    for artista in input_file:
+        model.addArtista(museo, artista)
+
+
+def cargarObras(museo):
+    """
+    Carga todos los tags del archivo y los agrega a la lista de tags
+    """
+    tagsfile = cf.data_dir + 'Artworks-utf8-small.csv'
+    input_file = csv.DictReader(open(tagsfile, encoding='utf-8'))
+    for obra in input_file:
+        model.addObra(museo, obra)
