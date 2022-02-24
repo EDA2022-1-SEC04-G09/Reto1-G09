@@ -34,6 +34,13 @@ se hace la solicitud al controlador para ejecutar la
 operación solicitada
 """
 
+def newController():
+    """
+    Se crea una instancia del controlador
+    """
+    control = controller.newController()
+    return control
+
 def printMenu():
     print("Bienvenido")
     print("1- Cargar información en el catálogo")

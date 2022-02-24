@@ -36,3 +36,13 @@ El controlador se encarga de mediar entre la vista y el modelo.
 # Funciones de ordenamiento
 
 # Funciones de consulta sobre el catálogo
+
+def newController():
+    """
+    Crea una instancia del modelo
+    """
+    control = {
+        'model': None
+    }
+    control['model'] = model.newCatalog()
+    return control

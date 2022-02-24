@@ -37,7 +37,72 @@ los mismos.
 
 # Construccion de modelos
 
+def newCatalog():
+    """
+   
+    """
+    spotify= {'artistas': None,
+            'albumes': None}
+
+    
+
+    spotify['artistas'] = lt.newList('ARRAY_LIST')
+    spotify['albumes'] = lt.newList('ARRAY_LIST')       
+
+    return (spotify)
+
+    
+                            
+
 # Funciones para agregar informacion al catalogo
+
+def addArtistas(id, track_id, artist_popularity, genres, name, followers):
+
+    artista= {'id': " ",
+            'track_id': " ",
+            'artist_popularity': " ",
+            'genres': " ",
+            'name': " ",
+            'followers': " "}
+    artista['id']=id
+    artista['genres'] = lt.newList('ARRAY_LIST')
+    artista['genres']= genres
+    artista['track_id']= track_id
+    artista['artist_popularity']= artist_popularity
+    artista['name']= name
+    artista['followers']= followers
+    return artista
+
+def addAlbumes (id,track_id,total_tracks,external_urls,album_type,available_markets,artist_id,images,release_date,name,release_date_precision):
+
+    album = {"id":"",
+             "track_id":"",
+             "total_tracks":"",
+             "external_urls":"",
+             "album_type":"",
+             "available_markets":"",
+             "artist_id":"",
+             "images":"",
+             "release_date":"",
+             "name":"",
+             "release_date_precision":""
+
+    }
+    album["id"]=id
+    album["track_id"]=track_id
+    album["total_tracks"]=total_tracks
+    album["external_urls"]=external_urls
+    album["album_type"]=album_type
+    album["available_markets"]= lt.newList('ARRAY_LIST')
+    album["available_markets"]=available_markets
+    album["artist_id"]=artist_id
+    album["images"]= lt.newList('ARRAY_LIST')
+    album["images"]=images
+    album["release_date"]=release_date
+    album["name"]=name
+    album["release_date_precision"]=release_date_precision
+
+    return album
 
 # Funciones para creacion de datos
 
@@ -46,3 +111,4 @@ los mismos.
 # Funciones utilizadas para comparar elementos dentro de una lista
 
 # Funciones de ordenamiento
+
