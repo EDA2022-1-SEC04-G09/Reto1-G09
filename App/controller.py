@@ -53,14 +53,12 @@ def cargarDatos(spotify):
 # Funciones para la carga de datos
 def cargarArtistas(spotify):
     """
-    Carga los libros del archivo.  Por cada libro se toman sus autores y por
-    cada uno de ellos, se crea en la lista de autores, a dicho autor y una
-    referencia al libro que se esta procesando.
+   
     """
-    booksfile = cf.data_dir + 'spotify-rtists-utf8-small.csv'
+    booksfile = cf.data_dir + 'spotify-artists-utf8-small.csv'
     input_file = csv.DictReader(open(booksfile, encoding='utf-8'))
     for artista in input_file:
-        model.addArtista(museo, artista)
+        model.addArtista(spotify, artista)
 
 
 def cargarObras(museo):
