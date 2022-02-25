@@ -164,7 +164,7 @@ def addAlbum(spotify, album):
     lt.addLast(spotify['albums'], album)
 
 def AddTrack(spotify, track):
-    lt.addLast(spotify["tracks]", track)
+    lt.addLast(spotify["tracks"], track)
 # Funciones para creacion de datos
 
 # Funciones de consulta
