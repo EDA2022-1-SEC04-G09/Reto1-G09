@@ -42,12 +42,15 @@ def newCatalog():
    
     """
     spotify= {'artistas': None,
-            'albumes': None}
+            'albums': None,
+            "tracks":None}
 
     
 
     spotify['artistas'] = lt.newList('ARRAY_LIST')
-    spotify['albumes'] = lt.newList('ARRAY_LIST')       
+    spotify['albums'] = lt.newList('ARRAY_LIST')
+    spotify['tracks'] = lt.newList('ARRAY_LIST')
+
 
     return (spotify)
 
@@ -104,10 +107,59 @@ def Albumes (id,track_id,total_tracks,external_urls,album_type,available_markets
 
     return album
 
+def Tracks (id,href,album_id,key,track_number,artists_id,energy,loudness,valence,danceability,playlist,speechiness,popularity,liveness,tempo,duration_ms,acousticness,available_markets,lyrics,disc_number,instrumentalness,preview_url,name):
+    tracks = {"id":"",
+            "href":"",
+            "album_id":"",
+            "key":0,
+            "track_number":0,
+            "artists_id":"",
+            "energy":0,
+            "loudness":0,
+            "valence":0,
+            "danceability":0,
+            "playlist":"",
+            "speechiness":0,
+            "popularity":0,
+            "liveness":0,
+            "tempo":0,
+            "duration_ms":0,
+            "acousticness":0,
+            "available_markets":"",
+            "lyrics":"",
+            "disc_number":"",
+            "instrumentalness":"",
+            "preview_url":"",
+            "name":""}
+    tracks["id"]=id
+    tracks["href"]=href
+    tracks["album_id"]=album_id
+    tracks["key"]=key
+    tracks["track_number"]=track_number
+    tracks["artists_id"]=artists_id
+    tracks["energy"]=energy
+    tracks["loudness"]=loudness
+    tracks["valence"]=valence
+    tracks["danceability"]=danceability
+    tracks["playlist"]=playlist
+    tracks["speechiness"]=speechiness
+    tracks["popularity"]=popularity
+    tracks["liveness"]=liveness
+    tracks["tempo"]=tempo
+    tracks["duration_ms"]=duration_ms
+    tracks["acousticness"]=acousticness
+    tracks["available_markets"]=available_markets
+    tracks["lyrics"]=lyrics
+    tracks["disc_number"]=disc_number
+    tracks["instrumentalness"]=instrumentalness
+    tracks[
+
+    return Tracks
+
 def addArtista(spotify, artista):
     lt.addLast(spotify['artistas'], artista)
 
-def addArtista(spotify, album):
+def addAlbum(spotify, album):
     lt.addLast(spotify['albums'], album)
 
 # Funciones para creacion de datos

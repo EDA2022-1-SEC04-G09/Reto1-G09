@@ -46,7 +46,7 @@ def catalogo():
 
 def cargarDatos(spotify):
     cargarArtistas(spotify)
-    cargarObras(spotify)
+    cargarAlbumes(spotify)
 
 
 
@@ -55,17 +55,17 @@ def cargarArtistas(spotify):
     """
    
     """
-    booksfile = cf.data_dir + 'spotify-artists-utf8-small.csv'
-    input_file = csv.DictReader(open(booksfile, encoding='utf-8'))
+    file = cf.data_dir + 'spotify-artists-utf8-small.csv'
+    input_file = csv.DictReader(open(file, encoding='utf-8'))
     for artista in input_file:
         model.addArtista(spotify, artista)
 
 
-def cargarObras(museo):
+def cargarAlbumes(spotify):
     """
     Carga todos los tags del archivo y los agrega a la lista de tags
     """
-    tagsfile = cf.data_dir + 'Artworks-utf8-small.csv'
-    input_file = csv.DictReader(open(tagsfile, encoding='utf-8'))
-    for obra in input_file:
-        model.addObra(museo, obra)
+    file = cf.data_dir + 'spotify-albums-utf8-small.csv'
+    input_file = csv.DictReader(open(file, encoding='utf-8'))
+    for album in input_file:
+        model.addAlbum(spotify, album)
