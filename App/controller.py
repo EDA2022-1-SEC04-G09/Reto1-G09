@@ -53,7 +53,6 @@ def cargarDatos(spotify):
 # Funciones para la carga de datos
 def cargarArtistas(spotify):
     """
-   
     """
     file = cf.data_dir + 'spotify-artists-utf8-small.csv'
     input_file = csv.DictReader(open(file, encoding='utf-8'))
@@ -63,9 +62,16 @@ def cargarArtistas(spotify):
 
 def cargarAlbumes(spotify):
     """
-    Carga todos los tags del archivo y los agrega a la lista de tags
     """
     file = cf.data_dir + 'spotify-albums-utf8-small.csv'
     input_file = csv.DictReader(open(file, encoding='utf-8'))
     for album in input_file:
         model.addAlbum(spotify, album)
+
+def cargarTracks(spotify):
+    """
+    """
+    file = cf.data_dir + 'spotify-tracks-utf8-small.csv'
+    input_file = csv.DictReader(open(file, encoding='utf-8'))
+    for track in input_file:
+        model.addTrack(spotify, track)

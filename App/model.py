@@ -152,7 +152,8 @@ def Tracks (id,href,album_id,key,track_number,artists_id,energy,loudness,valence
     tracks["lyrics"]=lyrics
     tracks["disc_number"]=disc_number
     tracks["instrumentalness"]=instrumentalness
-    tracks[
+    tracks["preview_url"]=preview_url
+    tracks["name"]=name
 
     return Tracks
 
@@ -162,6 +163,8 @@ def addArtista(spotify, artista):
 def addAlbum(spotify, album):
     lt.addLast(spotify['albums'], album)
 
+def AddTrack(spotify, track):
+    lt.addLast(spotify["tracks]", track)
 # Funciones para creacion de datos
 
 # Funciones de consulta
