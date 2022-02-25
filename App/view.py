@@ -55,7 +55,7 @@ def printMenu():
     print("7- Clasificar las canciones con mayor distribución")
     print("8- Salir")
 
-catalog = None
+
 
 """
 Menu principal
@@ -67,6 +67,24 @@ while True:
         print("Cargando información de los archivos ....")
 
     elif int(inputs[0]) == 2:
+        pass
+
+    elif int(inputs[0]) == 3:
+        pass
+
+    elif int(inputs[0]) == 4:
+        pass
+
+    elif int(inputs[0]) == 5:
+        pass
+
+    elif int(inputs[0]) == 6:
+        pass
+
+    elif int(inputs[0]) == 7:
+        pass
+
+    elif int(inputs[0]) == 8:
         pass
 
     else:
